@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://bug.png" type="Texture" id=1]
+[ext_resource path="res://Bug.gd" type="Script" id=2]
+
+[node name="Bug" type="RigidBody2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+offset = Vector2( 0, -16 )
+hframes = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -32, 0, -28, -16, -16, -28, 0, -32, 16, -28, 28, -16, 32, 0 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Pos1" type="Position2D" parent="."]
+position = Vector2( -32, 0 )
+__meta__ = {
+"_gizmo_extents_": 0.0
+}
+
+[node name="Pos2" type="Position2D" parent="."]
+position = Vector2( 32, 0 )
+__meta__ = {
+"_gizmo_extents_": 0.0
+}
+
+[node name="Pos3" type="Position2D" parent="."]
+position = Vector2( 0, -32 )
+__meta__ = {
+"_gizmo_extents_": 0.0
+}
+
+[node name="Pos4" type="Position2D" parent="."]
+position = Vector2( -22, -22 )
+__meta__ = {
+"_gizmo_extents_": 0.0
+}
+
+[node name="Pos5" type="Position2D" parent="."]
+position = Vector2( 22, -22 )
+__meta__ = {
+"_gizmo_extents_": 0.0
+}

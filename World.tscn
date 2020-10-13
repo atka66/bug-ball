@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Field.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Ball.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Bug.tscn" type="PackedScene" id=4]
+
+[node name="World" type="Node2D"]
+
+[node name="Field" parent="." instance=ExtResource( 2 )]
+
+[node name="RedBug" parent="." groups=[
+"player_red",
+] instance=ExtResource( 4 )]
+position = Vector2( 128, 320 )
+
+[node name="BlueBug" parent="." groups=[
+"player_blue",
+] instance=ExtResource( 4 )]
+position = Vector2( 672, 320 )
+
+[node name="Ball" parent="." instance=ExtResource( 3 )]
+position = Vector2( 400, 96 )

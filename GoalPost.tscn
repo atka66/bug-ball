@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 64, 48 )
+
+[node name="GoalPost" type="StaticBody2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( 0, 0, 32, 0, 32, 8, 8, 8, 8, 96, 0, 96 )
+
+[node name="Polygon2D" type="Polygon2D" parent="CollisionPolygon2D"]
+polygon = PoolVector2Array( 0, 0, 32, 0, 32, 8, 8, 8, 8, 96, 0, 96 )
+
+[node name="GoalTrigger" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="Polygon2D" type="CollisionShape2D" parent="GoalTrigger"]
+position = Vector2( -40, 48 )
+shape = SubResource( 1 )
